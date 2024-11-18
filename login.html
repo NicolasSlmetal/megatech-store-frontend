@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/form.css">
+    <title>Login</title>
+</head>
+<body>
+    
+    <main class="main">
+        <section class="form">
+            <h1 class="login__title">Login</h1>
+            <label class="label" for="email">Email</label>
+            <input type="email" id="email" class="email__input input" placeholder="Email">
+            <label class="label" for="password">Senha</label>
+            <input id="password" type="password" class="password__input input" placeholder="Senha">
+            <p class="error-message"></p>
+            <p class="register__text">Não tem conta? <a class="register__link" href="register.html" class="">Cadastre-se</a></p>
+            <button id="login-button" type="submit" class="login__button">Entrar</button>
+        </section>
+        
+    </main>
+        <div class="modal">
+            <div class="modal__content">
+                <h2 id="modal-title" class="modal__title"></h2>
+                <p id="modal-text" class="modal__text"></p>
+                <button id="modal-button" class="modal__button">Ok</button>
+            </div>
+        </div>
+    <script src="/scripts/loaders/loginLoader.js" type="module"></script>
+</body>
+</html>

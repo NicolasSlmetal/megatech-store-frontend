@@ -1,0 +1,304 @@
+@import url("index.css");
+
+.main {
+    margin-top: 100px;
+    width: 83.9%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--black-color);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.main__title {
+    text-align: center;
+}
+
+.main__board {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.search__board {
+    border: 1px solid var(--black-color);
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    border-radius: 10px;
+    justify-content: flex-start;
+}
+
+.search__input {
+    padding: 10px;
+    border: 1px solid var(--black-color);
+    border-radius: 5px;
+    margin-right: 10px;
+    color: var(--black-color);
+}
+
+.search__button {
+    padding: 10px;
+    border: 1px solid var(--black-color);
+    border-radius: 5px;
+    background-color: var(--black-color);
+    color: var(--white-color);
+    cursor: pointer;
+}
+
+.board__card {
+    border: 1px solid var(--black-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.board__card:hover {
+    color: var(--terciary-color);
+    border-color: var(--terciary-color);
+}
+
+.card__image {
+    width: 100px;
+    height: 100px;
+}
+
+.card__title {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.main__display {
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    gap: 0.5em;
+}
+
+.display__image {
+    width: 300px;
+    height: 300px;
+}
+
+.display__price {
+    font-size: 2rem;
+}
+
+.main__group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+}
+
+.main__info {
+    text-align: justify;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.info_manufacturer {
+    font-size: 1.5rem;
+}
+
+
+.button {
+    padding: 40px;
+    font-size: large;
+    border: 1px solid var(--black-color);
+    border-radius: 5px;
+    background-color: var(--black-color);
+    color: var(--white-color);
+    cursor: pointer;
+}
+
+.buy__button {
+    padding: 40px;
+    font-size: large;
+    border: 1px solid var(--black-color);
+    border-radius: 5px;
+    background-color: var(--black-color);
+    color: var(--white-color);
+    cursor: pointer;
+}
+
+.button__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 45%;
+}
+
+.advice {
+    font-size: 1.5rem;
+    color: var(--terciary-color);
+}
+
+.purchase-quantity {
+    padding: 10px;
+}
+
+.buy__button:hover {
+    background-color: var(--darker-primary-color);
+    border-color: var(--darker-primary-color);
+}
+
+.search__button:hover {
+    background-color: var(--darker-primary-color);
+    border-color: var(--darker-primary-color);
+}
+
+.quantity__input {
+    padding: 10px;
+    border: 1px solid var(--black-color);
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.disabled {
+    background-color: var(--grey-color);
+    border-color: var(--grey-color);
+    cursor: not-allowed;
+}
+
+.disabled:hover {
+    background-color: var(--grey-color);
+    border-color: var(--grey-color);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.modal__title {
+    text-align: center;
+}
+
+.modal__button {
+    padding: 10px;
+    border: 1px solid var(--black-color);
+    border-radius: 5px;
+    background-color: var(--black-color);
+    color: var(--white-color);
+    width: 100%;
+    cursor: pointer;
+}
+
+.modal__text {
+    width: 100%;
+    text-align: center;
+}
+
+
+.button-div {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+}
+
+.payment__section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.radio__div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    border: 1px solid var(--black-color);
+    padding: 1em;
+}
+
+.radio__separation {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.remove__button {
+    padding: 10px;
+    border: 1px solid var(--white-color);
+    border-radius: 5px;
+    background-color: var(--danger-color);
+    color: var(--white-color);
+    cursor: pointer;
+}
+
+.edit__button {
+    padding: 10px;
+    border: 1px solid var(--black-color);
+    border-radius: 5px;
+    background-color: var(--black-color);
+    color: var(--white-color);
+    cursor: pointer;
+}
+
+.edit__button:hover {
+    background-color: var(--darker-primary-color);
+    border-color: var(--darker-primary-color);
+}
+
+.remove__button:hover {
+    background-color: var(--danger-color-hover);
+}
+
+.register__button:hover {
+    background-color: var(--darker-primary-color);
+    border-color: var(--darker-primary-color);
+}
+
+.modal__button:hover {
+    background-color: var(--darker-primary-color);
+    border-color: var(--darker-primary-color);
+}
+
+.button:hover {
+    background-color: var(--darker-primary-color);
+    border-color: var(--darker-primary-color);
+}

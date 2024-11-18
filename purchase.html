@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/cart.css">
+    <title>Compra</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="header__nav">
+                <img class="nav__logo" src="./assets/images/logo.png" alt="Logo" class="header__logo">
+                <ul class="header__menu">
+                    <li class="header__menu-item"><a href="/index.html" class="header__menu__link">Home</a></li>
+                    <li class="header__menu-item"><a id="double-state-li-one" href="./login.html" class="header__menu__link">Entrar</a></li>
+                    <li class="header__menu-item"><a id="double-state-li-two" href="./register.html" class="header__menu__link">Cadastrar</a></li>
+                    <li class="header__menu-item"><a href="./about.html" class="header__menu__link">Sobre</a></li>
+                </ul>
+        </nav>
+   </header>
+
+   <main id="cart-container" class="cart">
+        <h1 class="cart__title">Carrinho</h1>
+        <p id="total-purchase"></p>
+        <section class="cart__board">
+            
+        </section>
+        
+        <button id="purchase-button" class="button buy__button">Confirmar compra</button>
+    </main>
+    <div id="two-buttons-modal" class="modal">
+        <div class="modal__content">
+            <h2 id="modal-title" class="modal__title"></h2>
+            <p id="modal-text" class="modal__text"></p>
+            <div class="button-div">
+                <button id="modal-button-no" class="modal__button">Não</button>
+                <button id="modal-button-yes" class="modal__button">Sim</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/scripts/loaders/purchaseLoader.js" type="module"></script>
+</body>
+</html>

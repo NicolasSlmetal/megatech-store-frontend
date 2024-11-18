@@ -1,0 +1,52 @@
+@import url("index.css");
+
+.cart {
+    margin-top: 100px;
+    width: 83.9%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--black-color);
+    border-radius: 10px;
+    gap: 10px;
+    padding: 15px;
+}
+
+.cart__board {
+    display: flex;
+    border: 1px solid var(--black-color);
+    padding: 1em;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    overflow: scroll;
+}
+
+.product__name {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+}
+
+.display__image {
+    width: 100px;
+    height: 100px;
+}
+
+.product__display {
+    border: 1px solid var(--black-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    width: 250px;
+}
+

@@ -1,0 +1,119 @@
+@import url("index.css");
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.input {
+    padding: 10px;
+    border: 1px solid var(--black-color);
+    border-radius: 5px;
+    width: 100%;
+}
+
+
+.login__button {
+    padding: 10px;
+    border: 1px solid var(--black-color);
+    border-radius: 5px;
+    background-color: var(--black-color);
+    color: var(--white-color);
+    cursor: pointer;
+    width: 100%;
+    font-size: 1em;
+}
+
+.register__link {
+    text-align: left;
+    color: var(--black-color);
+    cursor: pointer;
+    align-self: start;
+    color: var(--primary-color)
+}	
+
+.register__text {
+    text-align: left;
+    align-self: start;
+    color: var(--black-color);
+}
+
+.readonly {
+    background-color: var(--lighter-primary-color);
+    color: var(--black-color);
+}
+
+.form__division {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    padding: 1em;
+    border: 1px solid var(--black-color);
+    border-radius: 5px;
+}
+
+
+.label {
+    text-align: left;
+    color: var(--black-color);
+    align-self: start;
+}
+
+.error-message {
+    color: var(--danger-color);
+    text-align: left;
+    align-self: start;
+}	
+
+.register__link:hover {
+    color: var(--darker-primary-color)
+}	
+
+.login__button:hover {
+    background-color: var(--darker-primary-color);
+    border-color: var(--darker-primary-color);
+}
+
+.login__button:active {
+    background-color: var(--lighter-primary-color);
+    border-color: var(--lighter-primary-color);
+}
+
+
+.register__button {
+    padding: 10px;
+    border: 1px solid var(--black-color);
+    border-radius: 5px;
+    background-color: var(--black-color);
+    color: var(--white-color);
+    cursor: pointer;
+    width: 100%;
+    font-size: 1em;
+}
+.disabled__button {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    cursor: not-allowed;
+}
+
+.password__rules {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    padding: 1em;
+    border: 1px solid var(--black-color);
+    border-radius: 5px;
+}
+
+.valid {
+    color: var(--success-color);
+}
+.invalid {
+    color: var(--danger-color);
+}

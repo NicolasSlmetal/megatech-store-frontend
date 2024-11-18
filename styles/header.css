@@ -1,0 +1,62 @@
+@import url("index.css");
+
+.header {
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+.header__nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+.nav__logo {
+    width: 77px;
+    height: 77px;
+    border: 1px solid var(--black-color);
+    border-radius: 10px;
+}
+
+.header__nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.header__menu-item {
+    padding: 10px;
+    height: 100%;
+    color: var(--white-color);
+    cursor: pointer;
+    padding: 30px;
+}
+
+.active {
+    background-color: var(--terciary-color);
+}
+
+.header__menu-item:hover {
+    background-color: var(--darker-primary-color);
+}
+
+.active:hover {
+    background-color: var(--darker-terciary-color);
+}

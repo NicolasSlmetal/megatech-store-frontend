@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendas</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="styles/table.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="header__nav">
+                <img class="nav__logo" src="./assets/images/logo.png" alt="Logo" class="header__logo">
+                <ul class="header__menu">
+                    <li class="header__menu-item"><a href="/adminStock.html" class="header__menu__link">Produtos</a></li>
+                    <li class="header__menu-item active"><a href="./adminPurchase.html" class="header__menu__link">Vendas</a></li>
+                    <li class="header__menu-item"><a id="double-state-li-one" href="./login.html" class="header__menu__link">Logout</a></li>
+                </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <h1>Volume de vendas por produto</h1>
+        <section class="table__section">
+            <table class="table">
+                <thead class="table__head">
+                    <tr>
+                        <th>Nome</th>
+                        <th>Quantidade vendida</th>
+                        <th>Valor total</th>
+                    </tr>
+                </thead>
+                <tbody id="purchase-table">
+                    
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <script type="module" src="scripts/loaders/adminPurchaseLoader.js"></script>
+</body>
+</html>

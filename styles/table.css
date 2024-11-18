@@ -1,0 +1,42 @@
+@import url("index.css");
+
+.table__section {
+    margin-bottom: 1rem;
+    width: 100%;
+    overflow-x: auto;
+    text-align: center;
+    border: 1px solid var(--black-color);
+}
+.table__head {
+    background-color: var(--darker-primary-color);
+    color: var(--black-color);
+}
+
+.table__row {
+    display: table-row;
+    padding: 1em;
+    margin: 1em;
+}
+
+.table__row:hover {
+    background-color: var(--terciary-color);
+}
+
+.table__column {
+    display: table-cell;
+    padding: 1em;
+    margin: 1em;
+}
+
+.table__column:hover {
+   zoom: 115%;
+}
+
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}

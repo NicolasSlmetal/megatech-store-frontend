@@ -1,0 +1,18 @@
+@import url("index.css");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: var(--black-color);
+}
+
+hr {
+    border: 1px solid var(--black-color);
+    margin: 1em 0;
+    width: 100%;
+}

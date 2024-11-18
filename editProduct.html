@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atualizar produto</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="styles/table.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="header__nav">
+                <img class="nav__logo" src="./assets/images/logo.png" alt="Logo" class="header__logo">
+                <ul class="header__menu">
+                    <li class="header__menu-item"><a href="/adminStock.html" class="header__menu__link">Produtos</a></li>
+                    <li class="header__menu-item"><a href="./adminPurchase.html" class="header__menu__link">Vendas</a></li>
+                    <li class="header__menu-item"><a id="double-state-li-one" href="./login.html" class="header__menu__link">Logout</a></li>
+                </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <h1>Atualizar produto</h1>
+        <section class="form">
+            <input type="hidden" id="id" class="input">
+            <label class="label" for="name">Nome</label>
+            <input type="text" id="name" class="input">
+            <p class="error-message" id="name-error"></p>
+            <label class="label" for="manufacturer">Fabricante</label>
+            <input type="text" id="manufacturer" class="input">
+            <p class="error-message" id="manufacturer-error"></p>
+            <label class="label" for="price">Preço</label>
+            <input type="number" id="price" class="input" min="1">
+            <p class="error-message" id="price-error"></p>
+            <label class="label" for="stockQuantity">Quantidade em estoque</label>
+            <input type="number" id="stockQuantity" class="input">  
+            <p class="error-message" id="stockQuantity-error"></p>
+            <label class="label" for="image">URL da Imagem</label>
+            <input type="url" id="image" class="input">
+            <button id="add-product-button" class="register__button">Atualizar produto</button>
+        </section>
+    </main>
+    <div class="modal">
+        <div class="modal__content">
+            <h2 id="modal-title" class="modal__title"></h2>
+            <p id="modal-text" class="modal__text"></p>
+            <button id="modal-button" class="modal__button">Ok</button>
+        </div>
+    </div>
+    <script type="module" src="scripts/loaders/editLoader.js"></script>
+</body>
+</html>

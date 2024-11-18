@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra bem-sucedida!</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+<body>
+
+   <main class="main">
+    <section class="payment__section">
+        <h1>Compra bem-sucedida!</h1>
+        <p>Seu pedido foi realizado com sucesso! Agora, escolha o método de pagamento:</p>
+        <p id="total"></p>
+        <div class="radio__div">
+            <div class="radio__separation">
+                <input type="radio" name="payment" id="payment-credit" value="credit">
+                <label for="payment">Crédito</label>    
+            </div>
+            <div class="radio__separation">
+                <input type="radio" name="payment" id="payment-debit" value="debit">
+                <label for="payment">Débito</label>
+            </div>
+            <div class="radio__separation">
+                <input type="radio" name="payment" id="payment-bill" value="boleto">
+                <label for="payment">Boleto</label>
+            </div>
+        </div>
+        <button id="payment-button" class="button disabled__button" disabled>Confirmar método de pagamento</button>
+    </section>
+    <div class="modal">
+        <div class="modal__content">
+            <h2 id="modal-title" class="modal__title"></h2>
+            <p id="modal-text" class="modal__text"></p>
+            <button id="modal-button" class="modal__button">Ok</button>
+        </div>
+    </div>
+    </main>
+    <script src="/scripts/loaders/paymentLoader.js" type="module"></script>
+</body>
+</html>

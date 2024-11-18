@@ -1,0 +1,82 @@
+.profile__section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 1em;
+    border: 1px solid var(--black-color);
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+.edit__button {
+    padding: 10px;
+    border: 1px solid var(--black-color);
+    border-radius: 5px;
+    background-color: var(--black-color);
+    color: var(--white-color);
+    width: 100%;
+    cursor: pointer;
+}
+
+.edit__button:hover {
+    background-color: var(--darker-primary-color);
+    border-color: var(--darker-primary-color);
+}
+
+.purchase__history {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 1em;
+    border: 1px solid var(--black-color);
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+}
+
+.purchase {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 1em;
+    width: 100%;
+    height: 100%;
+}
+
+.purchase__list {
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding: 1em;
+    width: 100%;
+    height: 100%;
+    overflow-x: scroll;
+}
+
+.purchase__item {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 1em;
+    border: 1px solid var(--black-color);
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+}
+
+.little__img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <title>Produto</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="header__nav">
+                <img class="nav__logo" src="assets/images/logo.png" alt="Logo" class="header__logo">
+                <ul class="header__menu">
+                    <li class="header__menu-item"><a href="/index.html" class="header__menu__link">Home</a></li>
+                    <li class="header__menu-item"><a id="double-state-li-one" href="./login.html" class="header__menu__link">Entrar</a></li>
+                    <li class="header__menu-item"><a id="double-state-li-two" href="./register.html" class="header__menu__link">Cadastrar</a></li>
+                    <li class="header__menu-item" ><a href="./about.html" class="header__menu__link">Sobre</a></li>
+                </ul>
+        </nav>
+   </header>
+   <main class="main">
+        <div class="main__group">
+            <section class="main__display">
+                <img class="display__image" alt="Produto">
+                <h2 class="display__name"></h2>
+                <p class="display__price"></p>
+                <p class="display__quantity"></p>
+                <p class="display__manufacturer"></p>
+            </section> 
+            <div class="button__list">
+                <p id="status" class="advice"></p>
+                <label for="quantity-input">Quantidade</label>
+                <input id="quantity-input" class="quantity__input" type="number" min="1" placeholder="Quantidade">
+                <button id="purchase-button" class="button buy__button">Comprar</button>
+                <button id="add-to-cart-button" class="button buy__button">Adicionar ao carrinho</button>
+            </div>
+        </div>
+   </main>
+    <script src="/scripts/loaders/productLoader.js" type="module"></script>
+</body>

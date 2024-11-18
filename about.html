@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="header__nav">
+                <img class="nav__logo" src="./assets/images/logo.png" alt="Logo" class="header__logo">
+                <ul class="header__menu">
+                    <li class="header__menu-item" onclick="window.location.href='index.html'"><a href="/index.html" class="header__menu__link">Home</a></li>
+                    <li class="header__menu-item" onclick="window.location.href='login.html'"><a id="double-state-li-one" href="./login.html" class="header__menu__link">Entrar</a></li>
+                    <li class="header__menu-item" onclick="window.location.href='register.html'"><a id="double-state-li-two" href="./register.html" class="header__menu__link">Cadastrar</a></li>
+                    <li class="header__menu-item active" onclick="window.location.href='about.html'"><a href="./about.html" class="header__menu__link">Sobre</a></li>
+                </ul>
+        </nav>
+   </header>
+   <main class="main">
+    <h1>Sobre</h1>
+    <section class="about__section">
+        <h2>Quem somos</h2>
+        <p>Somos uma empresa que atua no ramo de vendas de produtos eletrônicos. Nosso objetivo é fornecer produtos de qualidade com preços acessíveis.</p>
+        <h2>Missão</h2>
+        <p>Nossa missão é fornecer produtos de qualidade com preços acessíveis, garantindo a satisfação dos nossos clientes.</p>
+        <h2>Visão</h2>
+        <p>Nossa visão é ser referência no mercado de vendas de produtos eletrônicos, garantindo a satisfação dos nossos clientes.</p>
+        <h2>Valores</h2>
+        <p>Nossos valores são a ética, a transparência, a qualidade e a satisfação do cliente.</p>
+   </main>
+   <script src="scripts/loaders/aboutLoader.js" type="module"></script>
+</body>
+</html>

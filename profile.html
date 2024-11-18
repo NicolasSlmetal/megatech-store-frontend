@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/profile.css">
+    <link rel="stylesheet" href="styles/form.css">
+    <title>Perfil</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="header__nav">
+                <img class="nav__logo" src="./assets/images/logo.png" alt="Logo" class="header__logo">
+                <ul class="header__menu">
+                    <li class="header__menu-item"><a href="/index.html" class="header__menu__link">Home</a></li>
+                    <li class="header__menu-item"><a id="double-state-li-one" href="./login.html" class="header__menu__link">Entrar</a></li>
+                    <li class="header__menu-item active"><a id="double-state-li-two" href="./register.html" class="header__menu__link">Cadastrar</a></li>
+                    <li class="header__menu-item"><a href="./about.html" class="header__menu__link">Sobre</a></li>
+                </ul>
+        </nav>
+   </header>
+   <main class="main">
+    <h1>Perfil</h1>
+    <section class="profile__section">
+        <h2>Informações pessoais</h2>
+        <label for="profile-name" class="label">Nome</label>
+        <input type="text" id="profile-name" class="input readonly" readonly>
+        <label for="profile-email" class="label">Email</label>
+        <input type="text" id="profile-email" class="input readonly" readonly>
+        <label for="profile-cpf" class="label">CPF</label>
+        <input type="text" id="profile-cpf" class="input readonly" readonly>
+        <label for="profile-register-date" class="label">Data do primeiro acesso</label>
+        <input type="text" id="profile-register-date" class="input readonly" readonly>
+        <button id="profile-edit" class="edit__button">Editar</button>
+    </section>
+    <section id="purchase-history" class="purchase__history">
+        <h2>Histórico de compras</h2>
+        
+    </section>
+   </main>
+   <div class="modal">
+        <div class="modal__content">
+            <h2 id="modal-title" class="modal__title"></h2>
+            <p id="modal-text" class="modal__text"></p>
+            <button id="modal-button" class="modal__button">Ok</button>
+        </div>
+    </div>
+   <script src="scripts/loaders/profileLoader.js" type="module"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.9/inputmask.js" integrity="sha512-ALLDs6ZhqQxaXq3/BFeiYsBtvcu7VLAAybmG3BxcUXgCviCZgdFntIjfHF15c+KPMiGdhEyPhxdY6mTxW3p/lQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <script>
+       Inputmask({
+           mask: "999.999.999-99"
+        }).mask(document.getElementById("profile-cpf"));
+        </script>
+</body>
+</html>
