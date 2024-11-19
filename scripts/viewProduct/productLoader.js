@@ -1,3 +1,5 @@
+import { verifyIfErrorIsAuth } from "../auth/logout.js";
+import { getAuthorizationHeader } from "../auth/verifyAuth.js";
 import { API_URL } from "../index.js";
 import { handleCartButton, handlePurchaseButton } from "../listenerConfig/buttonAction.js";
 import { configureButton } from "../listenerConfig/buttonConfig.js";
@@ -48,9 +50,10 @@ export async function fetchAllProductsFromAPI() {
 
 export async function fetchAllProductsWithZeroStock() {
     try{
-        const body = await makeRequest(`${API_URL}/products/zero`, "GET");
+        const body = await makeRequest(`${API_URL}/products/zero`, "GET", undefined, getAuthorizationHeader());
         return body;
     } catch (error){
+        verifyIfErrorIsAuth(error, "login.html");
         console.error(error);
         throw error;
     }

@@ -1,3 +1,4 @@
+import { verifyIfErrorIsAuth } from "../auth/logout.js";
 import { configureModal, configureModalContent } from "../listenerConfig/modalConfig.js";
 import { editProduct, getProductFromForm } from "./editProduct.js";
 
@@ -9,6 +10,7 @@ export function configureEditProductButton(){
             await editProduct(product);
             window.location.href = "/adminStock.html";
         } catch (error) {
+            verifyIfErrorIsAuth(error, "login.html");
             const title = "Erro ao atualizar";
             let message = "Não foi possível atualizar o produto, tente novamente mais tarde";
             if (error.status == 400) {

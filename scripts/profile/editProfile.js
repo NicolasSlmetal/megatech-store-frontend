@@ -1,12 +1,16 @@
+import { verifyIfErrorIsAuth } from "../auth/logout.js";
+import { getAuthorizationHeader } from "../auth/verifyAuth.js";
 import { API_URL } from "../index.js";
 import { configureModal, configureModalContent } from "../listenerConfig/modalConfig.js";
 import { makeRequest } from "../request/request.js";
 
 export async function editProfile(editFields) {
     try {
-        const updatedProfile = await makeRequest(`${API_URL}/customers/${localStorage.getItem("id")}`, "PUT", editFields);
+        const updatedProfile = await makeRequest(`${API_URL}/customers/me`, "PUT", editFields, getAuthorizationHeader());
         return updatedProfile;
     } catch (error) {
+        localStorage.setItem("lastActivity", "profile");
+        verifyIfErrorIsAuth(error, "login.html");
         const title = "Erro ao editar perfil";
         let message = "Ocorreu um erro inesperado";
         if (error.status == 400) {

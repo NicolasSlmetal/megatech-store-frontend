@@ -1,9 +1,16 @@
+import { verifyIfErrorIsAuth } from "../auth/logout.js";
+import { getAuthorizationHeader } from "../auth/verifyAuth.js";
 import { API_URL } from "../index.js";
 import { makeRequest } from "../request/request.js";
 
-export async function fetchPurchaseHistoryOfCustomer(customerId) {
-    const response = await makeRequest(`${API_URL}/purchases/${customerId}`, "GET");
-    return response;
+export async function fetchPurchaseHistoryOfCustomer() {
+    try {
+        const response = await makeRequest(`${API_URL}/purchases/me`, "GET", undefined, getAuthorizationHeader());
+        return response;
+    } catch (error) {
+        verifyIfErrorIsAuth(error);
+        console.error(error);
+    }
 }
 
 export function printPurchaseHistoryOrderingByDate(purchases) {

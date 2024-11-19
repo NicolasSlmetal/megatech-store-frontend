@@ -1,3 +1,4 @@
+import { verifyIfErrorIsAuth } from "../auth/logout.js";
 import { configureModal, configureModalContent } from "../listenerConfig/modalConfig.js";
 import { getProductFromForm, insertProduct } from "./insertProduct.js";
 
@@ -9,6 +10,7 @@ export function configureAddProductButton() {
             await insertProduct(product);
             window.location.href = "adminStock.html";
         } catch (error) {
+            verifyIfErrorIsAuth(error, "login.html");
             console.error(error);
             configureModal();
             let title = "Erro";

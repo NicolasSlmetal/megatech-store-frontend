@@ -1,26 +1,16 @@
-import { API_URL } from "../index.js";
-import { makeRequestWithoutJsonReturn } from "../request/request.js";
+
 
 export async function verifyAuth() {
-    let authenticated = false;
     const token = localStorage.getItem("token");
     if (!token) return false;
-    const authorization = {
+    return true;
+}
+
+export function getAuthorizationHeader() {
+    const token = localStorage.getItem("token");
+    return {
         "Authorization": `Bearer ${token}`
     };
-    try {
-        const request = await makeRequestWithoutJsonReturn(`${API_URL}/auth`, "GET", undefined, authorization)
-        if (request.ok) {
-            authenticated = true
-        } else {
-            localStorage.removeItem("token");
-            
-        }
-    } catch (error) {
-        console.error(error);
-        localStorage.removeItem("cart");
-    }
-    return authenticated;
 }
 
 

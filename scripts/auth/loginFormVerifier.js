@@ -69,8 +69,6 @@ export async function authenticateUser(user) {
     try {
         const loginRequest = await makeRequest(`${API_URL}/login`, "POST", user);
         localStorage.setItem("token", loginRequest.token);
-        localStorage.setItem("role", loginRequest.role);
-        localStorage.setItem("id", loginRequest.id);
         if (loginRequest.role == "CUSTOMER") {
             redirectToLastActivity();
             return;
@@ -88,14 +86,17 @@ export function redirectToLastActivity() {
         window.location.href = "index.html";
         return;
     }
-    localStorage.removeItem("lastActivity");
-    const quantity = localStorage.getItem("quantity");
-    if (!quantity) {
-        window.location.href = "index.html";
-        return;
+    if (lastActivity == "purchase") {
+        const quantity = localStorage.getItem("quantity");
+        if (!quantity) {
+            window.location.href = "index.html";
+            return;
+        }
+        localStorage.removeItem("quantity");
+        loadCart(quantity);
     }
-    localStorage.removeItem("quantity");
-    loadCart(quantity);
+
+    localStorage.removeItem("lastActivity");
     window.location.href = `${lastActivity}.html`;
     
 }

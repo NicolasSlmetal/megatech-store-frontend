@@ -1,9 +1,11 @@
+
 import { API_URL } from "../index.js";
 import { makeRequest } from "../request/request.js";
+import { getAuthorizationHeader } from "../auth/verifyAuth.js";
 
 export async function insertProduct(product) {
     try {
-        await makeRequest(`${API_URL}/products`, "POST", product);
+        await makeRequest(`${API_URL}/products`, "POST", product, getAuthorizationHeader());
     } catch (error) {
         console.error(error);
         throw error;

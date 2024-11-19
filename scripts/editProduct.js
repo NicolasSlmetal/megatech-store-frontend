@@ -8,7 +8,6 @@ import { configListItensForAdmin } from "./listenerConfig/menuAdapter.js";
 
 
 export async function main() {
-    checkAuthForAdmin();
     configListItensForAdmin();
     const productId = new URLSearchParams(window.location.search).get('id');
     const product = await getProduct(productId);

@@ -1,3 +1,4 @@
+import { verifyIfErrorIsAuth } from "../auth/logout.js";
 import {  configureModalContent, configureModalWithTwoButtons } from "../listenerConfig/modalConfig.js";
 import { sendPurchaseRequest } from "./purchasePost.js";
 import { generateTemplateMessageForModal } from "./purchasePrinter.js";
@@ -26,6 +27,8 @@ export function configPurchaseButton(products) {
                 window.location.href = "payment.html";
             } catch (error) {
                 console.log(error);
+                localStorage.setItem("lastActivity", "purchase.html");
+                verifyIfErrorIsAuth(error, "login.html");
                 configureModalWithTwoButtons();
                 document.querySelector("#modal-button-yes").style.display = "none";
                 document.querySelector("#modal-button-no").innerText = "Ok";

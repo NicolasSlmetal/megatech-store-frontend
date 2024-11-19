@@ -15,7 +15,8 @@ export async function makeRequest(url, method, body = undefined, headers = undef
     const request = await fetch(url, {...options});
 
     if (!request.ok) {
-        const error = await request.json();
+        console.log("Request error: ", request);
+        const error = request.status != 401 && request.status != 403 ? await request.json() : "Unauthorized";
         throw new RequestError(request.status, {
             message: error.message,
             errors: error.errors
@@ -37,10 +38,10 @@ export async function makeRequestWithoutJsonReturn(url, method, body = undefined
         },
         body: payload
     }
-    const request = await fetch(url, options);
+    const response = await fetch(url, options);
 
-    if (!request.ok) {
-        throw new RequestError(request.status, request.body);
+    if (!response.ok) {
+        throw new RequestError(response.status, response.body);
     }
-    return request;
+    return response;
 }

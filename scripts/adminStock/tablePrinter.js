@@ -1,3 +1,4 @@
+import { verifyIfErrorIsAuth } from "../auth/logout.js";
 import { configureModalContent, configureModalWithTwoButtons } from "../listenerConfig/modalConfig.js";
 import { updateProduct } from "../viewProduct/productManager.js";
 import { configRemoveButton } from "./buttonConfig.js";
@@ -114,6 +115,7 @@ export function printTableProductsWithZeroStock(products) {
                         await updateProduct({id: product.id, stockQuantity: quantity});
                         window.location.reload();
                     } catch (error) {
+                        verifyIfErrorIsAuth(error, "login.html");
                         configureModalWithTwoButtons();
                         const noButton = document.querySelector("#modal-button-no");
                         document.querySelector("#modal-button-yes").style.display = "none";
