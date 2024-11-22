@@ -1,6 +1,7 @@
 import { API_URL } from "../index.js";
 import { makeRequest } from "../request/request.js";
 import { getAuthorizationHeader } from "../auth/verifyAuth.js";
+import { verifyIfErrorIsAuth } from "../auth/logout.js";
 
 export async function fetchTotalValuePerProduct() {
     try{
