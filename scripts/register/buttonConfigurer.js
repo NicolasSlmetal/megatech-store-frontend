@@ -60,7 +60,6 @@ export function configureButtonAction() {
             const response = await makeRequest(`${API_URL}/customers`, "POST", payload);
             const authPayload = payload.user;
             await authenticateUser(authPayload);
-            redirectToLastActivity();
         } catch (error) {
             let errorMessage = '';
             let modalTitle = "Erro ao cadastrar!";
