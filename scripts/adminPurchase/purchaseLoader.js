@@ -5,7 +5,7 @@ import { verifyIfErrorIsAuth } from '../auth/logout.js';
 
 export async function loadPurchasesByProduct() {
     try {
-        const purchases = await makeRequest(`${API_URL}/purchases/totalValue`, "GET", undefined, getAuthorizationHeader());
+        const purchases = await makeRequest(`${API_URL}/purchases/total-value-by-product`, "GET", undefined, getAuthorizationHeader());
         return purchases;
     } catch (error) {
         verifyIfErrorIsAuth(error, "login.html");
