@@ -5,7 +5,7 @@ import { makeRequest } from "../request/request.js";
 
 export async function fetchPurchaseHistoryOfCustomer() {
     try {
-        const response = await makeRequest(`${API_URL}/purchases/me`, "GET", undefined, getAuthorizationHeader());
+        const response = await makeRequest(`${API_URL}/customers/me/purchases`, "GET", undefined, getAuthorizationHeader());
         return response;
     } catch (error) {
         verifyIfErrorIsAuth(error);
