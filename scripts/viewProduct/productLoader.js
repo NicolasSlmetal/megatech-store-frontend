@@ -50,7 +50,7 @@ export async function fetchAllProductsFromAPI() {
 
 export async function fetchAllProductsWithZeroStock() {
     try{
-        const body = await makeRequest(`${API_URL}/products/zero`, "GET", undefined, getAuthorizationHeader());
+        const body = await makeRequest(`${API_URL}/products/stock/zero`, "GET", undefined, getAuthorizationHeader());
         return body;
     } catch (error){
         verifyIfErrorIsAuth(error, "login.html");
