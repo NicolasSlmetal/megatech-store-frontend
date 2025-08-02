@@ -1,3 +1,4 @@
+import { API_URL } from "../index.js";
 import { configureRegisterButton } from "./buttonConfigurer.js";
 
 export function validateCEP(cep) {
@@ -5,7 +6,7 @@ export function validateCEP(cep) {
 }
 
 export function fetchAddressByCEP(cep) {
-    return fetch(`https://viacep.com.br/ws/${cep}/json/`)
+    return fetch(`${API_URL}/addresses?cep=${cep}`)
         .then(response => {
             if (!response.ok) {
                 throw new Error(response.statusText);
