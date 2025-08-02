@@ -11,7 +11,7 @@ export async function makeRequest(url, method, body = undefined, headers = undef
         },
         body: payload
     }
-    console.log("Request options: ", options);
+    
     const request = await fetch(url, {...options});
 
     if (!request.ok) {
